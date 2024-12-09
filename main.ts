@@ -10,15 +10,16 @@ function next_fibonacci () {
 input.onButtonPressed(Button.AB, function () {
     group = next_fibonacci()
     basic.showNumber(group)
+    radio.setGroup(group)
 })
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "strength") {
         strength = Math.map(radio.receivedPacket(RadioPacketProperty.SignalStrength), -95, -42, 0, 9)
-        led.plotBarGraph(
-        strength,
-        9
-        )
     }
+    led.plotBarGraph(
+    strength,
+    9
+    )
 })
 let strength = 0
 let ___tempvar2: number[] = []
