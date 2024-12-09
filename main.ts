@@ -13,7 +13,7 @@ input.onButtonPressed(Button.AB, function () {
 })
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "strength") {
-        strength = Math.map(strength, -95, -42, 0, 9)
+        strength = Math.map(radio.receivedPacket(RadioPacketProperty.SignalStrength), -95, -42, 0, 9)
         led.plotBarGraph(
         strength,
         9
