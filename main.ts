@@ -29,6 +29,7 @@ let group = 0
 group = 1
 fib2 = 1
 radio.setGroup(group)
+basic.showNumber(group)
 basic.forever(function () {
 	
 })
